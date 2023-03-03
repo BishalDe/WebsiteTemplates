@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackHole</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="static/Images/360_F_261428574_ytlLsXGvkZKW9eJogQdIhMthPmUG46Us.jpg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <a href="/"><div class="logo">Black<span id="logo-text">Hole</span></div></a>
+        <div class="hamberger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Facts</a></li>
+            <li><a href="#">Discovery</a></li>
+            <li><a href="#">AboutUs</a></li>
+            <li><a href="#">ContactUs</a></li>
+            <li><button type="button" class="btn1">Subscribe</button></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="maincontent">
+        <div class="logo">Black<span id="logo-text">Hole</span></div>
+        Result Of God Dividing The Universe By Zero
+      </div>
+    </main>
+    <div class="container con1">
+      <span
+        >IMAGINE THE <br />
+        EVENT HORIZON OF <br />
+        BLACK HOLES</span
+      >
+    </div>
+    <div class="container con2">
+      <img
+        src="static/Images/39976b18d4a2475e7a5083a845415cb8.gif"
+        alt="Spinning BlackHole"
+      />
+      <div>
+        <h1>What is a black hole?</h1>
+        <h4>
+          Black holes are extremely dense pockets of matter, objects of such
+          incredible mass and miniscule volume that they drastically warp the
+          fabric of space-time. Anything that passes too close, from a wandering
+          star to a photon of light, gets captured. Most black holes are the
+          condensed remnants of a massive star, the collapsed core that remains
+          following an explosive supernova. However, the black hole family tree
+          has several branches, from tiny structures on par with a human cell to
+          enormous giants billions of times more massive than our sun.
+        </h4>
+      </div>
+    </div>
+    <footer>
+      <p>@BishalDe<br />bishalde208@yahoo.com</p>
+    </footer>
+    <script>
+      hamberger = document.querySelector(".hamberger");
+      hamberger.onclick = function () {
+        navBar = document.querySelector(".nav-bar");
+        header = document.querySelector(".header");
+        header.classList.toggle("active");
+        navBar.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>

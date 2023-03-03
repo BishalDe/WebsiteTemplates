@@ -1,0 +1,288 @@
+:root{
+    --color:white;
+    --contrastcolor:orangered;
+    --bgcolor:black;
+    --fontsize:15px;
+    --fontstyle:'Poppins', sans-serif;
+}
+
+*{
+    font-family: var(--fontstyle);
+    font-size: var(--fontsize);
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: var(--color);
+}
+
+main{
+    background-color:var(--bgcolor);
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(static/Images/wallpaperflare.com_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    height: 60vh;
+}
+
+.logo{
+    font-size: 2.5rem;
+}
+
+#logo-text{
+    color: var(--contrastcolor);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border-bottom: 1px solid orangered;
+    background: rgba(12, 12, 12, 0.3);
+    backdrop-filter: blur( 5px );
+}
+
+.hamberger{
+    cursor: pointer;
+    display: none;
+}
+.hamberger .line{
+    background-color: #fefefe;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+
+}
+
+.nav-bar ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nav-bar ul li {
+    list-style: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    display: block;
+    color: #fefefe;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: .2s;
+    margin: 0 5px;
+}
+
+
+.nav-bar ul li a:hover{
+    color: yellow;
+    transition: all .6s ease;
+    text-decoration: underline;
+}
+
+nav>ul>li>.btn1{
+    border: none;
+    background-color: orangered;
+
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+nav>ul>li>.btn1:hover{
+    transform: scale(1.1);
+}
+
+main>div{
+    display: block;
+    position: absolute;
+    top:30%;
+    left:0;
+    right: 0;
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.maincontent>.logo{
+    font-size: 7rem;
+    margin-bottom: 30px;
+    
+}
+
+.maincontent>.logo>#logo-text{
+    color: var(--contrastcolor);
+    font-size: 7rem;
+    margin-bottom: 30px;
+    
+}
+
+.container {
+    display: block;
+    height: 50%;
+    background-color: rgb(5, 3, 3);
+}
+
+.con1{
+    background-color: rgba(11,4,5,255);
+    background-image: url(/static/Images/eso1907a.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10%;
+
+
+}
+.con1 span{
+    font-family: 'Ubuntu', sans-serif;
+    display: block;
+    text-align: center;
+    line-height: 110px;
+    font-size: 6rem;
+}
+
+
+.con2{
+    transition: .5s ease;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(5, 5,5);
+}
+.con2 img{
+    height: 50vh;
+    width: 100vw;
+    border-radius:50px;
+
+}
+
+.con2 h1{
+    font-size: 4rem;
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 100px;
+    color: var(--contrastcolor);
+}
+
+.con2 h4{
+    font-size: 1.5rem;
+    font-family: var(--fontstyle);
+    text-align: justify;
+}
+
+footer{
+    float: clear;
+    height: 10vh;
+    background-color: black;
+    border-top: .5px solid orangered;
+    padding: 10px 20px;
+}
+
+
+
+@media screen and (max-width:1060px){
+    :root{
+        --fontsize:12px;
+    }  
+    .nav-bar ul li a{
+        padding: 10px 10px;
+    } 
+    
+    .con2 h1{
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .con2{
+        transition: .5s ease;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+@media screen and (max-width:750px){
+    header{
+        z-index: 5;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px 20px;
+        backdrop-filter: blur( 15px );
+
+    }
+    .hamberger{
+        display: block;
+    }
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+    }  
+    .nav-bar ul {
+        flex-direction: column;
+        font-size: .5rem;
+        opacity: 0;
+    }
+    .nav-bar ul li{
+        margin-bottom: 10px;
+    }
+
+    .header.active{
+        height: 60vh;
+    }
+
+    .nav-bar.active ul{
+        opacity: 1;
+    }
+
+    main>div{
+        z-index: 1;
+        top:40%;
+        font-size: 3.5rem;
+
+    }
+    
+    .maincontent>.logo{
+        font-size: 5rem;
+        margin-bottom: 30px;
+        
+    }
+    
+    .maincontent>.logo>#logo-text{
+        color: var(--contrastcolor);
+        font-size: 5rem;
+        margin-bottom: 30px;
+        
+    }
+
+    .con1>span{
+        font-size: 4.4rem;
+        line-height: 90px;
+    }
+
+
+
+}
